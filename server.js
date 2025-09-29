@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const PORT = 3000;
+const PORT = 80;
 const message = require("./lang/messages/en/user.js");
 const utils = require('./modules/utils');
 const fs = require('fs');
@@ -35,6 +35,6 @@ app.get('/COMP4537/labs/3/readFile/', (req, res) => {
     });
 })
 
-app.listen(PORT, '0.0.0.0',() => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log('Running')
 })

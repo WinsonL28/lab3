@@ -5,7 +5,9 @@ const message = require("./lang/messages/en/user.js");
 const utils = require('./modules/utils');
 const fs = require('fs');
 const path = require('path');
+const cors = requier('cors')
 
+app.use(cors());
 
 app.get('/COMP4537/labs/3/getDate/', (req, res) => {
     const username = req.query.name

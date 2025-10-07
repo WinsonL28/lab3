@@ -13,7 +13,11 @@ class MyServer {
     }
 
     respond(res, statusCode, body, contentType = 'text/html; charset=utf-8') {
-        res.writeHead(statusCode, { 'Content-Type': contentType });
+        res.writeHead(statusCode,
+            {
+                'Content-Type': contentType,
+                'Access-Control-Allow-Origin': '*'
+            });
         res.end(body);
     }
 

@@ -52,7 +52,7 @@ class MyServer {
                 }
                 const filePath = this.safePath(filename);
                 const data = await fs.readFile(filePath, 'utf8');
-                return this.respond(res, 200, `<p style="color:blue">${data}</p>`);
+                return this.respond(res, 200, `<p">${data}</p>`);
 
             } else {
                 return this.respond(res, 404, `<p>Not found</p>`);
